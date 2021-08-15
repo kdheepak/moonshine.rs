@@ -1,0 +1,17 @@
+[package]
+name = "moonshine"
+version = "0.1.0"
+authors = ["Dheepak Krishnamurthy <me@kdheepak.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn = { version = "1", features = ["full", "parsing", "extra-traits", "printing"] }
+quote = { version = "1" }
+proc-macro2 = { version = "1" }
+
+[dev-dependencies]
+trybuild = { version = "1.0", features = ["diff"] }
